@@ -1,0 +1,715 @@
+<body>
+
+	<script type="text/javascript">
+        var options = {
+            origin: "https://www.codeground.org",
+            path: "/storage/store.html"
+        };
+
+        var Storage = crossDomainStorage(options);
+
+        Storage.getItem('cgESId', function(key, value) {
+            if (value !== 'undefined' && value != null && sessionStorage.getItem("cgESId") != value) {
+                $.ajax({
+                    type: "POST",
+                    url: "/session",
+                    contentType: 'application/json;charset=UTF-8',
+                    data: JSON.stringify(value),
+                    success: function(response) {
+                        sessionStorage.setItem("cgESId", value);
+                    },
+                    error: function(request, err, ex) {
+                        console.log(error);
+                    }
+                });
+            } else {
+                console.log("error :: " + value);
+            }
+        });
+    </script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115758486-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-115758486-1');
+	</script>
+
+	<!-- wrapper -->
+	<div id="wrapper">
+
+		<!-- header -->
+		<header id="header">
+			<div class="rows">
+				<h1 id="logo">
+					<a href="/">SAMSUNG Research</a>
+				</h1>
+			</div>
+			<nav id="gnb">
+				<div class="rows">
+					<ul>
+						<li><a id=mAboutUs snb-target="about-us" class="about_us"><span>ABOUT US</span></a></li>
+						<li><a id=mResearchArea snb-target="research-area"><span>RESEARCH AREAS</span></a></li>
+						<li><a id=mGlobal snb-target="global-network"><span>GLOBAL R&amp;D NETWORK</span></a></li>
+						<li><a id=mNewsEvent snb-target="news-events"><span>NEWS&nbsp;&amp;&nbsp;EVENTS</span></a></li>
+						
+						<li><a id=mCareers snb-target="careers"><span>CAREERS</span></a></li>
+					</ul>
+				</div>
+			</nav>
+			<div id="snb">
+				<!-- about us -->
+				<div class="rows about-us">
+					<ul class="f">
+						<li class="snb_title">ABOUT US</li>
+						<li><a href="/whoweare" class="f" under="who">Who We Are</a></li>
+						<li><a href="/vision-mission" class="f" under="mission">Vision &amp; Mission</a></li>
+						<li><a href="/contact" class="f" under="contact">Contact</a></li>
+					</ul>
+					<div class="under who a">
+						<span class="title">Who We Are</span>
+						<div class="image">
+							<img src="https://cdn.codeground.org/sr/images/main/snb_aboutus.jpg" alt="ABOUT US image" title="ABOUT US image">
+						</div>
+						<p class="txt">Samsung Research is a comprehensive R&amp;D organization for Samsung&#39;s SET business.</p>
+					</div>
+					<div class="under mission">
+						<span class="title">Vision &amp; Mission</span>
+						<div class="image">
+							<img src="https://cdn.codeground.org/sr/images/main/snb_vision.png" alt="Vision & Mission image" title="Vision & Mission image">
+						</div>
+						<p class="txt">This is Samsung Research&#39;s vision &amp; mission</p>
+					</div>
+					<div class="under contact">
+						<span class="title">Contact</span>
+						<div class="image">
+							<img src="https://cdn.codeground.org/sr/images/main/snb_location.png" alt="Contact image" title="Contact image">
+						</div>
+						<p class="txt">This is where Samsung Research is located</p>
+					</div>
+				</div>
+				<!-- //about us -->
+				<!-- research area -->
+				<div class="rows research-area">
+					<ul class="g">
+						<li class="snb_title"><a href="/research-areas" class="g">RESEARCH AREAS</a></li>
+						<li><a href="/artificial-intelligence" class="g" under="artificial-intelligence">Artificial Intelligence</a></li>
+						<li><a href="/data-intelligence" class="g" under="data-intelligence">Data Intelligence</a></li>
+						<li><a href="/iot" class="g" under="cloud-iot">IoT</a></li>
+						<li><a href="/tizen" class="g" under="tizen">Tizen</a></li>
+						<li><a href="/smart-machine" class="g" under="smart-machine">Smart Machine</a></li>
+						<li><a href="/security" class="g" under="security">Security</a></li>
+						<li><a href="/next-generation-media" class="g" under="next-generation-media">Next Generation Media</a></li>
+					</ul>
+					<div class="under artificial-intelligence a">
+						<span class="title">Artificial Intelligence</span>
+						<div class="image">
+							<img src="https://cdn.codeground.org/sr/images/main/snb_ai.jpg" alt="Artificial Intelligence image" title="Artificial Intelligence image">
+						</div>
+						<p class="txt">Next generation AI platform for enabling New user experiences from our various devices and services.</p>
+					</div>
+					<div class="under data-intelligence">
+						<span class="title">Data Intelligence</span>
+						<div class="image">
+							<img src="https://cdn.codeground.org/sr/images/main/snb_di.jpg" alt="Data Intelligence image" title="Data Intelligence image">
+						</div>
+						<p class="txt">
+							Developing novel data processing and analytics technologies inspired by artificial intelligence to strengthen the competitiveness of Samsung’s devices and services.
+						</p>
+					</div>
+					<div class="under cloud-iot">
+						<span class="title">IoT</span>
+						<div class="image">
+							<img src="https://cdn.codeground.org/sr/images/main/snb_cloud_iot.jpg" alt="IoT image" title="IoT image">
+						</div>
+						<p class="txt">Top-notch Digital Transformation Enabler Providing Data-Driven Platform.</p>
+					</div>
+					<div class="under tizen">
+						<span class="title">Tizen</span>
+						<div class="image">
+							<img src="https://cdn.codeground.org/sr/images/main/snb_tizen.png" alt="Tizen image" title="Tizen image">
+						</div>
+						<p class="txt">Platform for all Samsung devices & Infrastructure for data intelligence.</p>
+					</div>
+					<div class="under smart-machine">
+						<span class="title">Smart Machine</span>
+						<div class="image">
+							<img src="https://cdn.codeground.org/sr/images/main/snb_smart_machine.jpg" alt="Smart Machine image" title="Smart Machine image">
+						</div>
+						<p class="txt">Securing core S&#47;W of Smart Machine and Data to create future business.</p>
+					</div>
+					<div class="under security">
+						<span class="title">Security</span>
+						<div class="image">
+							<img src="https://cdn.codeground.org/sr/images/main/snb_security.png" alt="Security image" title="Security image">
+						</div>
+						<p class="txt">The next generation security solution integrating intelligent device network and service.</p>
+					</div>
+					<div class="under next-generation-media">
+						<span class="title">Next Generation Media</span>
+						<div class="image">
+							<img src="https://cdn.codeground.org/sr/images/main/snb_ngm.jpg" alt="Next Generation Media image" title="Next Generation Media image">
+						</div>
+						<p class="txt">Enabling media devices and services to provide top-quality media experience from any content resources.</p>
+					</div>
+				</div>
+				<!-- //research area -->
+				<!-- global-area-->
+				<div class="rows global-network">
+					<ul class="i">
+						<li class="snb_title"><a href="/global-rnd-network" class="title">GLOBAL R&amp;D CENTERS</a></li>
+						<li class="s"><a class="s a america">America</a>
+							<ul class="t a america">
+								<li class="sub_menu_line"></li>
+								<li class="t"><a href="/sra" class="t">Samsung Research America</a></li>
+								<li class="t"><a href="/srca" class="t">Samsung R&amp;D Institute Canada</a></li>
+								<li class="t"><a href="/srbr" class="t">Samsung R&amp;D Institute Brazil</a></li>
+							</ul></li>
+						<li class="s"><a class="s">Europe/CIS/Middle East</a>
+							<ul class="t">
+								<li class="sub_menu_line"></li>
+								<li class="t"><a href="/sruk" class="t">Samsung R&amp;D Institute United kingdom</a></li>
+								<li class="t"><a href="/srpol" class="t">Samsung R&amp;D Institute Poland</a></li>
+								<li class="t"><a href="/srr" class="t">Samsung R&amp;D Institute Russia</a></li>
+								<li class="t"><a href="/srk" class="t">Samsung R&amp;D Institute Ukraine</a></li>
+								<li class="t"><a href="/sril" class="t">Samsung R&amp;D Institute Israel</a></li>
+								<li class="t"><a href="/srjo" class="t">Samsung R&amp;D Institute Jordan</a></li>
+							</ul></li>
+						<li class="s"><a class="s">Southwest/Southeast Asia</a>
+							<ul class="t">
+								<li class="sub_menu_line"></li>
+								<li class="t"><a href="/sri-d" class="t">Samsung R&amp;D Institute India-Delhi</a></li>
+								<li class="t"><a href="/sri-b" class="t">Samsung R&amp;D Institute India-Bangalore</a></li>
+								<li class="t"><a href="/sri-n" class="t">Samsung R&amp;D Institute India-Noida</a></li>
+								<li class="t"><a href="/srph" class="t">Samsung R&amp;D Institute Philippines</a></li>
+								<li class="t"><a href="/srbd" class="t">Samsung R&amp;D Institute Bangladesh</a></li>
+								<li class="t"><a href="/srin" class="t">Samsung R&amp;D Institute Indonesia</a></li>
+							</ul></li>
+						<li class="s"><a class="s">China</a>
+							<ul class="t">
+								<li class="sub_menu_line"></li>
+								<li class="t"><a href="/src-b" class="t">Samsung R&amp;D Institute China-Beijing</a></li>
+								<li class="t"><a href="/src-n" class="t">Samsung R&amp;D Institute China-Nanjing</a></li>
+								<li class="t"><a href="/src-g" class="t">Samsung R&amp;D Institute China-Guangzhou</a></li>
+								<li class="t"><a href="/src-s" class="t">Samsung R&amp;D Institute China-Shenzhen</a></li>
+								<li class="t"><a href="/src-t" class="t">Samsung R&amp;D Institute China-Tianjin</a></li>
+							</ul></li>
+						<li class="s"><a class="s">Japan</a>
+							<ul class="t">
+								<li class="sub_menu_line"></li>
+								<li class="t"><a href="/srj-o">Samsung R&amp;D Institute Japan-Osaka</a></li>
+								<li class="t"><a href="/srj-y">Samsung R&amp;D Institute Japan-Yokohama</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="j">
+						<li class="snb_title"><a href="/aicenter" class="title">GLOBAL AI CENTERS</a></li>
+						<li class="j"><a href="/aicenter_seoul" class="j">Samsung Research</a></li>
+						<li class="j"><a href="/aicenter_siliconvalley" class="j">Samsung Research America</a></li>
+						<li class="j"><a href="/aicenter_toronto" class="j">Toronto</a></li>
+						<li class="j"><a href="/aicenter_cambridge" class="j">Cambridge</a></li>
+						<li class="j"><a href="/aicenter_moscow" class="j">Moscow</a></li>
+					</ul>
+				</div>
+				<!-- //global area -->
+				<!--news area -->
+				<div class="rows news-events">
+					<ul class="h">
+						<li class="snb_title">NEWS&nbsp;&amp;&nbsp;EVENTS</li>
+						<li><a href="/news" class="h" under="news">News</a></li>
+						<li><a href="/events" class="h" under="events">Events</a></li>
+						<li><a href="/gallery" class="h" under="gallery">Gallery</a></li>
+					</ul>
+				</div>
+				<!-- //news area -->
+				<!--careers area -->
+				<div class="rows careers">
+					<ul class="i">
+						<li class="snb_title"><a href="/careers" class="s">Careers</a></li>
+						<li><a href="/facilities" class="i" under="facilities">Facilities</a></li>
+						<li><a href="/culture" class="i" under="culture">Culture</a></li>
+					</ul>
+				</div>
+				<!-- //careers area -->
+			</div>
+			
+			<div class="nav_wrapper no-scroll">
+				<h1 id="logo">
+					<a href="/">SAMSUNG Research</a>
+				</h1>
+				<div class="spinner-master" data-behaviour="toggle-menu-icon" id="spinner-form">
+					<div id="line-top" class="line"></div>
+					<div id="line-mid" class="line"></div>
+					<div id="line-bot" class="line"></div>
+				</div>
+				<nav id="lnb">
+					<ul>
+						<li><a href="#none">ABOUT US</a>
+							<ul class="submenu">
+								<li class="snb_title"><a>ABOUT US</a></li>
+								<li><a href="/whoweare">Who We Are</a></li>
+								<li><a href="/vision-mission">Vision &amp; Mission</a></li>
+								<li><a href="/contact">Contact</a></li>
+							</ul>
+						</li>
+						<li><a href="#none">RESEARCH AREAS</a>
+							<ul class="submenu">
+								<li class="snb_title"><a href="/research-areas">RESEARCH AREAS</a></li>
+								<li><a href="/artificial-intelligence" >Artificial Intelligence</a></li>
+								<li><a href="/data-intelligence">Data Intelligence</a></li>
+								<li><a href="/iot">IoT</a></li>
+								<li><a href="/tizen">Tizen</a></li>
+								<li><a href="/smart-machine">Smart Machine</a></li>
+								<li><a href="/security">Security</a></li>
+								<li><a href="/next-generation-media">Next Generation Media</a></li>
+							</ul>
+						</li>
+						<li><a href="#Link">GLOBAL R&amp;D NETWORK</a>
+							<ul class="submenu global">	
+								<li class="snb_title"><a href="#none">GLOBAL R&amp;D CENTERS</a>
+									<ul class="global_network">
+										<li class="snb_title"><a href="/global-rnd-network">GLOBAL R&amp;D CENTERS</a></li>
+										<li><a href="#none">America</a>
+											<ul>
+												<li><a href="/sra">Samsung Research America</a></li>
+												<li><a href="/srca">Samsung R&amp;D Institute Canada</a></li>
+												<li><a href="/srbr">Samsung R&amp;D Institute Brazil</a></li>
+											</ul>
+										</li>
+										<li><a href="#none">Europe/CIS/Middle East</a>
+											<ul>
+												<li><a href="/sruk">Samsung R&amp;D Institute United Kingdom</a></li>
+												<li><a href="/srpol">Samsung R&amp;D Institute Poland</a></li>
+												<li><a href="/srr">Samsung R&amp;D Institute Russia</a></li>
+												<li><a href="/srk">Samsung R&amp;D Institute Ukraine</a></li>
+												<li><a href="/sril">Samsung R&amp;D Institute Israel</a></li>
+												<li><a href="/srjo">Samsung R&amp;D Institute Jordan</a></li>
+											</ul>
+										</li>
+										<li><a href="#none">Southwest/Southeast Asia</a>
+											<ul>
+												<li><a href="/sri-d">Samsung R&amp;D Institute India-Delhi</a></li>
+												<li><a href="/sri-b">Samsung R&amp;D Institute India-Bangalore</a></li>
+												<li><a href="/sri-n">Samsung R&amp;D Institute India-Noida</a></li>
+												<li><a href="/srph">Samsung R&amp;D Institute Philippines</a></li>
+												<li><a href="/srbd">Samsung R&amp;D Institute Bangladesh</a></li>
+												<li><a href="/srin">Samsung R&amp;D Institute Indonesia</a></li>
+											</ul>
+										</li>
+										<li><a href="#none">China</a>
+											<ul>
+												<li><a href="/src-b">Samsung R&amp;D Institute China-Beijing</a></li>
+												<li><a href="/src-n">Samsung R&amp;D Institute China-Nanjing</a></li>
+												<li><a href="/src-g">Samsung R&amp;D Institute China-Guangzhou</a></li>
+												<li><a href="/src-s">Samsung R&amp;D Institute China-Shenzhen</a></li>
+												<li><a href="/src-t">Samsung R&amp;D Institute China-Tianjin</a></li>
+											</ul>
+										</li>
+										<li><a href="#none">Japan</a>
+											<ul>
+												<li><a href="/srj-o">Samsung R&amp;D Institute Japan-Osaka</a></li>
+												<li><a href="/srj-y">Samsung R&amp;D Institute Japan-Yokohama</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="snb_title"><a href="#none">GLOBAL AI CENTERS</a>
+									<ul>
+										<li class="snb_title"><a href="/aicenter">GLOBAL AI CENTERS</a></li>
+										<li><a href="/aicenter_seoul">Samsung Research</a></li>
+										<li><a href="/aicenter_siliconvalley">Samsung Research America</a></li>
+										<li><a href="/aicenter_toronto">Toronto</a></li>
+										<li><a href="/aicenter_cambridge">Cambridge</a></li>
+										<li><a href="/aicenter_moscow">Moscow</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#none">NEWS&nbsp;&amp;&nbsp;EVENTS</a>
+							<ul class="submenu">
+								<li class="snb_title"><a>NEWS&nbsp;&amp;&nbsp;EVENTS</a></li>
+								<li><a href="/news">News</a></li>
+								<li><a href="/events">Events</a></li>
+								<li><a href="/gallery">Gallery</a></li>
+							</ul>
+						</li>
+						
+						<li><a href="#none">CAREERS</a>
+							<ul class="submenu">
+								<li class="snb_title"><a href="/careers">Careers</a></li>
+								<li><a href="/facilities">Facilities</a></li>
+								<li><a href="/culture">Culture</a></li>
+							</ul></li>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+		</header>
+		<!-- //header -->
+
+		
+
+
+
+
+
+
+<!-- container -->
+<div id="container" class="p-main">
+	<div id="myCarousel" class="carousel slide main_visual" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+			
+		    <li>
+		    	<button id="pauseButton" type="button" title="pause">
+		    	      	<span class="pause"></span>
+			    </button>
+		    </li>
+		</ol>
+		<div class="carousel-inner" role="listbox" >
+		
+			
+			
+			
+			<div class="item active">
+				<picture>
+					<source srcset="https://cdn.codeground.org/sr/images/main/m_main_visual_15.png" media="(max-width: 768px)">
+					<img src="https://cdn.codeground.org/sr/images/main/main_visual_15.png" alt="Samsung Seoul R&D Campus"> 
+				</picture>
+				<div class="container">
+					<div class="carousel-caption left top" style="color:#2d3e72">
+						<p>
+							Shape the Future with<br>Innovation and Intelligence
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<picture>
+					<source srcset="https://cdn.codeground.org/sr/images/main/m_main_visual_7.png" media="(max-width: 768px)">
+					<img src="https://cdn.codeground.org/sr/images/main/main_visual_7.png" alt="Challenge the Limits Change the World"> 
+				</picture>
+				<div class="container">
+					<div class="carousel-caption left top">
+						<p>
+							Challenge the Limits<br>Change the World
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<picture>
+					<source srcset="https://cdn.codeground.org/sr/images/main/m_main_visual_13.png" media="(max-width: 768px)">
+					<img src="https://cdn.codeground.org/sr/images/main/main_visual_13.png" alt="Samsung AI Challenge 2018" title="Samsung Capture The Flag 2018"> 
+				</picture>
+				<div class="container">
+					<div class="carousel-caption p_cup aiChallenge">
+						<p>Samsung AI Challenge 2018</p>
+						<div>
+							<strong class="cyan">AI Hackathon</strong><br>Idea Pitch & Implementation Contest with AI Technology
+						</div>
+						<div>
+							<strong class="cyan">Data Challenge</strong><br>Problem Solving Contest with Data Analysis Skills
+						</div>
+						<div>Online Registration<br>July 2, 2018 ~</div>
+						
+						<button onclick = "javascript:goAIChallenge();">Apply</button>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<picture>
+					<source srcset="https://cdn.codeground.org/sr/images/main/m_main_visual_14.png" media="(max-width: 768px)">
+					<img src="https://cdn.codeground.org/sr/images/main/main_visual_14.png" alt="Samsung Security Tech Forum 2018" title="Samsung Security Tech Forum 2018"> 
+				</picture>
+				<div class="container">
+					<div class="carousel-caption p_cup sstf">
+						<p class="pc">Samsung Security Tech Forum</p>
+						<p class="mobile">Samsung Security<br>Tech Forum</p>
+						<dl>
+							<dt class="cyan">SCTF Final Round</dt>
+							<dd class="pc">August 26, 2018 (Sun.) 10:00 ~ August 27, 2018 (Mon.) 10:00 KST</dd>
+							<dd class="mobile">August 26, 2018 (Sun.) 10:00 ~<br>August 27, 2018 (Mon.) 10:00 KST</dd>
+						</dl>
+						<dl>
+							<dt class="cyan">SSTF Workshop</dt>
+							<dd>August 27, 2018 (Mon.)
+								<strong class="online">Online Registration</strong>
+								July 19, 2018(Thu.) ~ August 16, 2018(Thu.)
+							</dd>
+						</dl>						
+						<button onclick = "javascript:goSSTF();">Apply</button>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> 
+				<span><img src="https://cdn.codeground.org/sr/images/common/btn_left.png" alt="Previous" title="preview"></span>
+			</a> 
+			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> 
+				<span><img src="https://cdn.codeground.org/sr/images/common/btn_right.png" alt="next" title="next"></span>
+			</a>
+		</div>
+	</div>
+
+
+	<!-- research area -->
+	<div class="research-area rows">
+		<h2>Research Areas</h2>
+		<ul>
+			<li class="ai col-xs-6 col-md-3"><a href="/artificial-intelligence" title="Artificial Intelligence"> <img src="https://cdn.codeground.org/sr/images/main/main_ai.png" alt="Artificial Intelligence" class="image" title="Artificial Intelligence">
+					<div class="info">
+						<strong class="name">Artificial<br>Intelligence</strong>
+					</div>
+			</a></li>
+			<li class="di col-xs-6 col-md-3"><a href="/data-intelligence" title="Data Intelligence"> <img src="https://cdn.codeground.org/sr/images/main/main_di.png" alt="Data Intelligence"" class="image" title="Data Intelligence">
+					<div class="info">
+						<strong class="name">Data<br>Intelligence</strong>
+					</div>
+			</a></li>
+			<li class="cloud-iot col-xs-6 col-md-3"><a href="/iot" title="IoT"> <img src="https://cdn.codeground.org/sr/images/main/main_cloud.png" alt="IoT" class="image" title="IoT">
+					<div class="info">
+						<strong class="name">IoT</strong>
+					</div>
+			</a></li>
+			<li class="tizen col-xs-6 col-md-3"><a href="/tizen" title="Tizen"> <img src="https://cdn.codeground.org/sr/images/main/main_tizen.png" alt="Tizen" class="image" title="Tizen">
+					<div class="info">
+						<strong class="name">Tizen</strong>
+					</div>
+			</a></li>
+			<li class="smart-machine col-xs-6 col-md-3"><a href="/smart-machine" title="Smart Machine"> <img src="https://cdn.codeground.org/sr/images/main/main_smart.png" alt="Smart Machine" class="image" title="Smart Machine">
+					<div class="info">
+						<strong class="name">Smart<br>Machine</strong>
+					</div>
+			</a></li>
+			<li class="security col-xs-6 col-md-3"><a href="/security" title="Security"> <img src="https://cdn.codeground.org/sr/images/main/main_security.jpg" alt="Security" class="image" title="Security">
+					<div class="info">
+						<strong class="name">Security</strong>
+					</div>
+			</a></li>
+			<li class="ngm col-xs-6 col-md-3"><a href="/next-generation-media" title="Next Generation Media"> <img src="https://cdn.codeground.org/sr/images/main/main_media.png" alt="Next Generation Media" class="image" title="Next Generation Media">
+					<div class="info">
+						<strong class="name">Next Generation<br>Media</strong>
+					</div>
+			</a></li>
+			<!-- <li class="title"><img src="https://cdn.codeground.org/sr/images/sr_logo.png" alt="SAMSUNG RESEARCH" class="logo"></li> -->
+		</ul>
+	</div>
+	<!-- //research area -->
+
+	<div class="main-cont rows">
+		<div class="row">
+			<div class="col-sm-8">
+				<div class="global-rnd-network">
+					<h2>Global R&amp;D Network</h2>
+					<div class="article">
+						<a href="/global-rnd-network">
+							<picture>
+								<source srcset="https://cdn.codeground.org/resources/47da966f06/AWSL_hXAAAdD1SJn.png" media="(max-width: 768px)" title="Global R&amp;D Network Map">
+								<img src="https://cdn.codeground.org/resources/47da966f06/AWSL_hSgAARD1SJn.png" alt="Global R&amp;D Network Map" title="Global R&amp;D Network Map">
+							</picture>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="news-event">
+					<h2>News</h2>
+					
+					
+					<ul class="article list">
+						
+							<li class="headline">
+								<a href="http://bit.ly/2zlkHRW" target="_blank" class="image">
+									<img src="https://cdn.codeground.org/resources/47da966f06/AWR8-6ODAETDTFaU.jpg" alt="News image" title="News image">
+								</a> 
+								<a href="http://bit.ly/2zlkHRW" target="_blank" class="title">
+									Samsung Electronics Wins at Two Top Global AI Machine Reading Comprehension Challenges
+								</a> 
+								<span class="date">on July 09, 2018</span>
+							</li>
+						
+						<li>
+							
+								<a href="http://bit.ly/2KWIcp8" target="_blank" class="title">
+									&ldquo;With Samsung&rsquo;s Unique Strengths, We Are Developing a User-Oriented AI Algorithm&rdquo;
+								</a> 
+								<span class="date">on July 09, 2018</span>
+							
+						</li>
+						<li>
+							
+								<a href="https://news.samsung.com/global/mobile-industry-works-together-to-deliver-complete-5g-system-standard-on-time" target="_blank" class="title">
+									Mobile Industry Works Together to Deliver Complete 5G System Standard on Time
+								</a> 
+								<span class="date">on June 14, 2018</span>
+							
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="careers">
+			<h2>Careers</h2>
+			<div class="career">
+				<span>
+					<a href="/careers">Learn how to join the Samsung Research</a>
+				</span>
+				<img src="https://cdn.codeground.org/sr/images/common/ico_envelope.png" title="mail icon"> <a href="mailto:career.sr@samsung.com" title="Mail to career.sr@samsung.com">career.sr@samsung.com</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+
+<script type="text/javascript" src="https://cdn.codeground.org/sr/js/common.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		localStorage.setItem("CurrentMenu", null);
+		
+		$('a[href^="mailto:"]').bind('click', function() {
+	    	mailto.mailtologging('career.sr@samsung.com');
+		});
+	});
+	
+	$("button").click(function() {
+		if ($(this).attr("id") === "pauseButton") {
+			$('#myCarousel').carousel('pause');
+			$(this).attr("id", "playButton");
+			$("span", this).toggleClass("play pause");
+		} else {
+			$('#myCarousel').carousel('cycle');
+			$(this).attr("id", "pauseButton");
+			$("span", this).toggleClass("pause play");
+		}
+	});
+	
+	function goSCPC(){
+	  location.href = '/scpc';
+	}
+	
+	function goAI(){
+	  location.href = '/aicenter';
+	}
+	
+	function goSCTF(){
+	  location.href = '/sctf';
+	}
+	
+	function goAIChallenge(){
+	  location.href = '/aichallenge';
+	}
+	
+	function goSSTF(){
+	  location.href = '/sstf';
+	}
+	
+	
+</script>
+
+		<!-- footer -->
+		<footer id="footer" role="contentinfo">
+			<div class="rows footer_size">
+				<div class="backtotop">
+					<a href="#" class="gotop">Back to Top</a>
+				</div>
+				<div class="sitemap">
+					<div class="col">
+						<strong class="title">About Us</strong>
+						<ul>
+							<li><a href="/whoweare">Who We Are</a></li>
+							<li><a href="/vision-mission">Vision &amp; Mission</a></li>
+							<li><a href="/contact">Contact</a></li>
+						</ul>
+					</div>
+					<div class="col">
+						<strong class="title"><a href="/research-areas">Research Areas</a></strong>
+						<ul>
+							<li><a href="/artificial-intelligence">Artificial Intelligence</a></li>
+							<li><a href="/data-intelligence">Data Intelligence</a></li>
+							<li><a href="/iot">IoT</a></li>
+							<li><a href="/tizen">Tizen</a></li>
+							<li><a href="/smart-machine">Smart Machine</a></li>
+							<li><a href="/security">Security</a></li>
+							<li><a href="/next-generation-media">Next Generation Media</a></li>
+						</ul>
+					</div>
+					<div class="col">
+						<strong class="title ai"><a href="/global-rnd-network">Global R&amp;D Institute</a></strong> 
+						<strong class="title"><a href="/aicenter">Global AI Centers</a></strong>
+						<strong class="title belong">News &amp; Events</strong>
+						<ul>
+							<li><a href="/news">News</a></li>
+							<li><a href="/events">Events</a></li>
+							<li><a href="/gallery">Gallery</a></li>
+						</ul>
+						<strong class="title belong"><a href="/careers">Careers</a></strong>
+						<ul>
+							<li><a href="/facilities">Facilities</a></li>
+							<li><a href="/culture">Culture</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="sns">
+					<h2>SNS</h2>
+					<a href="https://www.facebook.com/samsungelectronics" target="_blank" class="face" title="Facebook">Facebook</a> 
+					<a href="https://news.samsung.com/global/" target="_blank" class="blog" title="Blog">Blog</a> 
+					<a href="https://twitter.com/samsung" target="_blank" class="twitter" title="Twitter">Twitter</a>
+				</div>
+			</div>
+			<!-- row -->
+			<div class="samsung-area">
+				<div class="footer_rows">
+					<div class="tc"><a href="/terms">Terms &amp; Conditions</a> <a href="/privacy" class="ml10">Privacy Policy</a></div>
+					<div class="sc">
+						56, Seongchon-gil, Seocho-gu, Seoul, Republic of Korea<br> Copyrightⓒ 1995-2018 SAMSUNG All Rights Reserved.
+					</div>
+
+					<div class="family">
+						<button type="button" class="call">Family Sites</button>
+						<ul class="sites">
+							<li><a href="https://www.samsung.com/us/" target="_blank">SAMSUNG</a></li>
+							<li><a href="http://developer.samsung.com" target="_blank">SAMSUNG DEVELOPERS</a></li>
+							<li><a href="https://www.codeground.org/" target="_blank">CODEGROUND</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</footer>
+	</div>
+	<!-- //wrapper -->
+	<script type="text/javascript">
+		var $footer = $('#footer');
+		$footer.familySites = $footer.find('.family');
+		$footer.familySites.call = $footer.familySites.find('.call');
+	
+		$footer.familySites.call.on('click', function () {
+			if ($(this).hasClass('a')) {
+				$(this).removeClass('a');
+				$(this).siblings('.sites').removeClass('a');
+			} else {
+				$(this).addClass('a');
+				$(this).siblings('.sites').addClass('a');
+			}
+		});
+	
+		$footer.familySites.on('mouseleave', function () {
+			$(this).find('.call').removeClass('a');
+			$(this).find('.sites').removeClass('a');
+		});
+	</script>
+</body>
