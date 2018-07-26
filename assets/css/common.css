@@ -11,3 +11,17 @@
 	display:block;
 	clear:both;
 	}
+#wrapper {
+	width:100%;
+	margin:0 auto;
+	min-width: 370px;
+	}
+.nav_wrapper {
+	display: none;
+	}
+#header {
+	position:relative;
+	background:#fff;
+	width:100%;
+	z-index: 9999;
+	}
