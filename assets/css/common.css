@@ -46,3 +46,11 @@
 	padding-top: 15px;
 	cursor: pointer;
 	}
+#gnb li span {
+	display:inline-block;
+	}
+#gnb li a.a span {
+	padding-bottom:11px;
+	border-bottom:2px solid #1428a0;
+	color:#1428a0;
+	}
