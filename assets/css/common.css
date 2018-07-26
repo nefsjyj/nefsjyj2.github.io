@@ -25,3 +25,24 @@
 	width:100%;
 	z-index: 9999;
 	}
+#gnb {
+	border-top:1px solid #dadada;
+	}
+#gnb ul:after {
+	content:'';
+	display:block;
+	clear:both;
+	}
+#gnb li {
+	float:left;
+	width:20%;
+	}
+#gnb li a {
+	display:block;
+	font-weight:700;
+	text-align:center;
+	font-size:14px;
+	height: 46px;
+	padding-top: 15px;
+	cursor: pointer;
+	}
