@@ -49,8 +49,28 @@
 #gnb li span {
 	display:inline-block;
 	}
-#gnb li a.a span {
-	padding-bottom:11px;
-	border-bottom:2px solid #1428a0;
-	color:#1428a0;
+#snb {
+	position: absolute;
+	width: 100%;
+	z-index: 100000;
+	background: #fff;
+	display: none;
+	}
+#snb.a {
+	display:block;
+	}
+#snb .rows {
+	display:none;
+	padding: 38px 0 33px 0;
+	}
+#snb .rows.a {
+	display:block;
+	}
+#snb a {
+	display:block;
+	padding:8px 0;
+	font-size: 14px;
+	font-weight:400;
+	text-transform: capitalize;
+	cursor: pointer;
 	}
