@@ -1,3 +1,6 @@
+/* 웹 폰트 자간, 행간 디테일 세팅  */
+body,input,textarea,select,button, td, p, div, dl, dt, dd {text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-moz-font-feature-settings:"liga", "kern"}
+
 /* initialize */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
