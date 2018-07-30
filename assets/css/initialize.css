@@ -1,5 +1,6 @@
 /* 웹 폰트 자간, 행간 디테일 세팅  */
 body,input,textarea,select,button, td, p, div, dl, dt, dd {text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-moz-font-feature-settings:"liga", "kern"}
+body {font:14px/normal 'sso', 'Malgun Gothic', '맑은 고딕', 'Dotum', '돋움', sans-serif; color:#000; font-weight:400;}
 
 /* initialize */
 html, body, div, span, object, iframe,
