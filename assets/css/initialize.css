@@ -19,3 +19,4 @@ time, mark, audio, video, *:before, *:after {margin: 0; padding: 0; border: 0; o
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary {display: block;}
 nav, menu, ul, ol, dl, li {list-style: none;}
+a {color:#000; text-decoration:none;}
